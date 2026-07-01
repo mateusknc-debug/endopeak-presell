@@ -5,53 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - EndoPeak®</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root { --primary: #0f2b46; --accent: #c9842b; --gold: #d4a84b; --dark: #0a0a0a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif; background: #f9f9f9; color: #333; line-height: 1.7; }
+        body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #2d3436; line-height: 1.7; }
+        .hero-inner {
+            background: linear-gradient(135deg, var(--primary), #0d3558);
+            text-align: center;
+            padding: 50px 20px 40px;
+        }
+        .hero-inner h1 { color: #fff; font-size: 36px; font-weight: 800; }
+        .hero-inner h1 span { color: var(--gold); }
         .container { max-width: 700px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #1a3c5e; font-size: 32px; margin-bottom: 25px; text-align: center; }
-        h2 { color: #1a3c5e; font-size: 22px; margin: 30px 0 15px; }
-        p { margin-bottom: 15px; font-size: 16px; }
-        .back-link { display: inline-block; margin-top: 30px; color: #1a3c5e; text-decoration: none; font-weight: 500; }
-        .back-link:hover { text-decoration: underline; }
-        .footer { background: #050404; color: #fff; text-align: center; padding: 15px; margin-top: 50px; }
-        .footer h3 { font-size: 11px; font-weight: 600; margin-bottom: 10px; }
-        .footer h3 a { color: #fff; text-decoration: underline; }
-        .footer p { font-size: 11px; font-weight: 300; line-height: 1.5; margin-bottom: 10px; }
-        .footer a { color: #fff; text-decoration: underline; }
+        h2 { color: var(--primary); font-size: 22px; font-weight: 700; margin: 30px 0 12px; }
+        p { margin-bottom: 14px; font-size: 15px; color: #444; }
+        .highlight-box {
+            background: #fff;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .package-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+        .pkg { background: #fff; border-radius: 14px; padding: 20px; text-align: center; border: 2px solid #eee; }
+        .pkg.popular { border-color: var(--accent); position: relative; }
+        .pkg.popular::before { content: 'BEST VALUE'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 10px; }
+        .pkg h4 { font-size: 13px; color: var(--primary); margin-bottom: 5px; }
+        .pkg .price { font-size: 28px; font-weight: 800; color: var(--accent); }
+        .pkg .price small { font-size: 14px; font-weight: 400; }
+        .pkg .per { font-size: 12px; color: #999; }
+        .back-link { display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+        .footer { background: var(--dark); color: rgba(255,255,255,0.5); text-align: center; padding: 25px 20px; margin-top: 50px; }
+        .footer a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; margin: 0 10px; }
+        .footer p { font-size: 11px; margin-top: 10px; }
+        @media (max-width: 600px) { .package-cards { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+    <div class="hero-inner">
+        <h1>About Endo<span>Peak</span></h1>
+    </div>
     <div class="container">
-        <h1>About EndoPeak</h1>
-
         <h2>What Is EndoPeak?</h2>
         <p>EndoPeak is a natural dietary supplement designed to support men's sexual health and vitality. Formulated with 8 carefully-selected plant-based ingredients, EndoPeak aims to support circulation, stamina, and overall well-being in a safe and natural way.</p>
 
-        <h2>The Formula</h2>
-        <p>EndoPeak combines a synergistic blend of natural ingredients including Hawthorn Berry, Tribulus, Chrysin, Epimedium, Saw Palmetto, Tongkat Ali, Winged Treebine, and Magnesium. Each ingredient is chosen for its specific role in supporting men's health goals.</p>
+        <div class="highlight-box">
+            <strong>The Science Behind EndoPeak:</strong> Each ingredient is chosen based on modern scientific research for its specific role in supporting men's health goals. The synergistic blend is designed for maximum absorption and effectiveness.
+        </div>
 
         <h2>Quality & Safety</h2>
         <p>EndoPeak is manufactured in the USA in an FDA registered and GMP certified facility under strict quality standards. The formula is non-GMO, contains no stimulants, and is non-habit forming. Only pure plant ingredients and natural minerals are used.</p>
 
         <h2>How to Use</h2>
-        <p>Simply take one EndoPeak capsule with a glass of water after your first meal of the day. For best results, consistent use over 3 months or longer is recommended to allow time for the natural ingredients to support your body.</p>
+        <p>Simply take one EndoPeak capsule with a glass of water after your first meal of the day. For best results, consistent use over 3 months or longer is recommended.</p>
+
+        <h2>Packages & Pricing</h2>
+        <div class="package-cards">
+            <div class="pkg">
+                <h4>30 Days</h4>
+                <div class="price">$69 <small>/bottle</small></div>
+                <div class="per">+ shipping</div>
+            </div>
+            <div class="pkg popular">
+                <h4>90 Days</h4>
+                <div class="price">$59 <small>/bottle</small></div>
+                <div class="per">free shipping + 2 e-books</div>
+            </div>
+            <div class="pkg">
+                <h4>180 Days</h4>
+                <div class="price">$49 <small>/bottle</small></div>
+                <div class="per">free shipping + 2 e-books</div>
+            </div>
+        </div>
 
         <h2>Shipping & Guarantee</h2>
-        <p>Orders are shipped within 24 working hours via premium carriers like FedEx or UPS. Domestic orders typically arrive within 5 to 10 days. EndoPeak comes with a 60-day money-back guarantee — if you're not satisfied, contact customer support for a full refund.</p>
-
-        <h2>Packages Available</h2>
-        <p><strong>Try One (30 days):</strong> $69 per bottle + shipping<br>
-        <strong>Most Popular (90 days):</strong> $59 per bottle + free shipping + 2 free e-books<br>
-        <strong>Best Value (180 days):</strong> $49 per bottle + free shipping + 2 free e-books</p>
+        <p>Orders ship within 24 hours via FedEx or UPS. Domestic delivery: 5-10 days. Every order is backed by a <strong>60-day money-back guarantee</strong> — try it risk-free.</p>
 
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
 
     <div class="footer">
-        <h3><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a> | <a href="about.html">About</a></h3>
-        <p><strong>FDA Disclosure:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
+        <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a>
+        <p>FDA Disclosure: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
         <p>© EndoPeak. All Rights Reserved.</p>
     </div>
 </body>
